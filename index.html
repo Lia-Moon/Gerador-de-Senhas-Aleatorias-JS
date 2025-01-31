@@ -14,20 +14,56 @@
 
 </head>
 <body>
-    <div class="main__content--title">       
-        <h1 class="title--solid">Gerador de Senhas</h1>
-        <h2 class="title--colourful">Aleatórias</h2>
+    <div class="page__header">       
+        <h1 class="page__header--title--solid">Gerador de Senhas</h1>
+        <h2 class="page__header--title--colourful">Aleatórias</h2>
     </div>
 
-    <div class="main__content--password">
-        <div class="main__content--password--container">
-            <input type="text" id="senha" class="password-generated">
+    <div class="page__subtitle">
+        <p>Sua senha forte em um clique! Gerador rápido, seguro e fácil.</p>
+    </div>
+
+    <div class="page__output">
+        <div class="page__output--container">
+            <input type="text" id="senha--container" class="page__output--container--password">
             <i class="material-symbols-outlined">cached</i>
         </div> 
     </div>
+    <div class="copy__button">
+        <button>Copiar</button>
+    </div>
+    <div class="size__password">
+        <div class="size__password--description">
+            <p>Tamanho de senha</p>
+        </div>
+        <div class="size__password--slider">
+            <i class="material-symbols-outlined">add_circle</i>
+            <input type="text" id="slider--bar" class="size__password--slider--bar">
+            <i class="material-symbols-outlined">do_not_disturb_on</i>
+        </div>
+    </div>
+    <div class="caracters__selection">
+        <div class="caracters__selection--description">
+            <p>Escolha as opções de caracteres</p>
+        </div>
+        <div class="caracters__selection--options">
+            <input type="text" id="caracters__selection--options--uppercase">
+            <i class="material-symbols-outlined">check</i>
+            <p>ABC</p>
+            <input type="text" id="caracters__selection--options--lowercase">
+            <i class="material-symbols-outlined">check</i>
+            <p>abc</p>
+            <input type="text" id="caracters__selection--options--numbers">
+            <i class="material-symbols-outlined">check</i>
+            <p>123</p>
+            <input type="text" id="caracters__selection--options--special">
+            <i class="material-symbols-outlined">check</i>
+            <p>%#$</p>
+        </div>
+    </div>
     <footer>
         <div class="footer">
-		    <p class="footer--copyright">&#169; Copyright - Júlia Vieira - 2025</p>
+		    <p class="footer__copyright">&#169; Copyright - Júlia Vieira - 2025</p>
         </div>
 	</footer>
 </body>
