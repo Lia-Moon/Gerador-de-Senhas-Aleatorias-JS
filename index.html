@@ -26,7 +26,7 @@
     <div class="page__output">
         <div class="page__output--container">
             <input type="text" id="senha--container" class="page__output--container--password">
-            <i class="material-symbols-outlined">cached</i>
+            <i class="material-symbols-outlined">cached</i> <!-- reload -->
         </div> 
     </div>
     <div class="copy__button">
@@ -38,8 +38,11 @@
         </div>
         <div class="size__password--slider">
             <i class="material-symbols-outlined">add_circle</i>
-            <input type="text" id="slider--bar" class="size__password--slider--bar">
-            <i class="material-symbols-outlined">do_not_disturb_on</i>
+            <div class="size__password--slider--bar--circle"> 
+                <input type="text" id="slider--bar" class="size__password--slider--bar">
+                <button class="size__password--slider--circle"></button>
+            </div>
+            <i class="material-symbols-outlined">do_not_disturb_on</i> <!-- minus symble -->
         </div>
     </div>
     <div class="caracters__selection">
@@ -47,17 +50,25 @@
             <p>Escolha as opções de caracteres</p>
         </div>
         <div class="caracters__selection--options">
-            <input type="text" id="caracters__selection--options--uppercase">
-            <i class="material-symbols-outlined">check</i>
+            <label class="caracters__selection--options--uppercase">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>    
             <p>ABC</p>
-            <input type="text" id="caracters__selection--options--lowercase">
-            <i class="material-symbols-outlined">check</i>
+            <label class="caracters__selection--options--lowercase">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>    
             <p>abc</p>
-            <input type="text" id="caracters__selection--options--numbers">
-            <i class="material-symbols-outlined">check</i>
+            <label class="caracters__selection--options--numbers">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>   
             <p>123</p>
-            <input type="text" id="caracters__selection--options--special">
-            <i class="material-symbols-outlined">check</i>
+            <label class="caracters__selection--options--special">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label> 
             <p>%#$</p>
         </div>
     </div>
