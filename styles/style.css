@@ -100,43 +100,116 @@ body {
 
 /* --------------------------------------- .size__password --------------------------------------- */
 
-.size__password--description { /* Tamanho senha */
+.size__password {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.size__password--description { /* Texto Tamanho senha */
     font-family: var(--font-secundaria);
     font-size: 20px;
     color: #D9D9D9;
     text-align: center;
-    padding: 2rem 5rem 3rem 5rem;
+    padding: 2rem 0 3rem 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.size__password--description--value {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: #B17DFF;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20px;
+}
+
+.size__password--slider {
+    position: relative;
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+   /*  height: 80px;
+    width: 100px; */
+    
+    padding: 0 4rem 1rem 4rem;
+    font-family: var(--font-secundaria);
+    font-size: 20px;
+    color: #D9D9D9;
+}
+
+.size__password--slider--field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%;
+    width: 100%; */
+
+    text-align: center;
 }
 
 .size__password--slider i {
-    color: #B17DFFC2;
+    color: #D9D9D9;
     font-size: 29px;
     cursor: pointer;
+    margin: 10px;
 }
 
-.size__password--slider--bar { /* Barra de aumentar e diminuir o tamanho da senha */
-    width: 285px;
-    height: 12px;
-    pointer-events: none;
-    border-radius: 10px;
-    background: #D9D9D9;
-    border: none;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-.size__password--slider--circle { /* Círculo de aumentar e diminuir o tamanho da senha */
-    width: 28px;
-    height: 28px;
+.size__password--slider--field input {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 10px;
     border: none;
     border-radius: 90px;
-    cursor: pointer;
-    background-color: #B17DFF;
-    box-shadow: none;
-    
+    background: #B17DFF;
+    outline: none;
+    border: none;
+    z-index: 2222;
 }
+
+.size__password--slider--field input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #B17DFF;
+    cursor: pointer;
+    border: 1px solid #D9D9D9;
+}
+
+.size__password--slider--field input::-moz-range-thumb {
+    /* -webkit-appearance: none; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #B17DFF;
+    cursor: pointer;
+    border: 1px solid #D9D9D9;
+}
+
+.size__password--slider--field input::-moz-range-progress {
+    background: #B17DFF;
+}
+
 
 
 /* --------------------------------------- .caracters__selection --------------------------------------- */
+
+.caracters__selection {
+    padding: 2rem 4rem 3rem 5rem;
+}
 
 .caracters__selection--description { /* Escolha as opções de caracteres */
     font-family: var(--font-secundaria);
@@ -177,7 +250,7 @@ body {
     height: 22px;
     border-radius: 6px;
     background: white;
-    transition: background 0.2s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 
 /* Estiliza quando o checkbox está marcado */

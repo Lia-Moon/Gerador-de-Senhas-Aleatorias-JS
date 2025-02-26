@@ -32,19 +32,21 @@
     <div class="copy__button">
         <button>Copiar</button>
     </div>
-    <div class="size__password">
+   
         <div class="size__password--description">
-            <p>Tamanho de senha</p>
+            <p>Tamanho da Senha:</p>
+            <span class="size__password--description--value">10</span>
         </div>
+
         <div class="size__password--slider">
-            <i class="material-symbols-outlined">add_circle</i>
-            <div class="size__password--slider--bar--circle"> 
-                <input type="text" id="slider--bar" class="size__password--slider--bar">
-                <button class="size__password--slider--circle"></button>
+            <div class="size__password--slider--field">
+                <i class="material-symbols-outlined">do_not_disturb_on</i>  <!-- minus symble  -->
+                <input type="range" min="0" max="50" value="10" steps="1">            
+                <i class="material-symbols-outlined">add_circle</i> <!-- plus symble -->
             </div>
-            <i class="material-symbols-outlined">do_not_disturb_on</i> <!-- minus symble -->
         </div>
-    </div>
+
+   
     <div class="caracters__selection">
         <div class="caracters__selection--description">
             <p>Escolha as opções de caracteres</p>
@@ -77,5 +79,8 @@
 		    <p class="footer__copyright">&#169; Copyright - Júlia Vieira - 2025</p>
         </div>
 	</footer>
+    
+    <script src="./js/script.js"></script>
+
 </body>
 </html>
