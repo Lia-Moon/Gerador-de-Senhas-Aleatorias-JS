@@ -13,26 +13,26 @@
 
 
 </head>
-<body>
-    <div class="page__header">       
-        <h1 class="page__header--title--solid">Gerador de Senhas</h1>
-        <h2 class="page__header--title--colourful">Aleatórias</h2>
-    </div>
+    <body>
+        <div class="page__header">       
+            <h1 class="page__header--title--solid">Gerador de Senhas</h1>
+            <h2 class="page__header--title--colourful">Aleatórias</h2>
+        </div>
 
-    <div class="page__subtitle">
-        <p>Sua senha forte em um clique! Gerador rápido, seguro e fácil.</p>
-    </div>
+        <div class="page__subtitle">
+            <p>Sua senha forte em um clique! Gerador rápido, seguro e fácil.</p>
+        </div>
 
-    <div class="page__output">
-        <div class="page__output--container">
-            <input type="text" id="senha--container" class="page__output--container--password">
-            <i class="material-symbols-outlined">cached</i> <!-- reload -->
-        </div> 
-    </div>
-    <div class="copy__button">
-        <button>Copiar</button>
-    </div>
-   
+        <div class="page__output">
+            <div class="page__output--container">
+                <input type="text" id="senha--container" class="page__output--container--password">
+                <i class="material-symbols-outlined">cached</i> <!-- reload -->
+            </div> 
+        </div>
+        <div class="copy__button">
+            <button>Copiar</button>
+        </div>
+    
         <div class="size__password--description">
             <p>Tamanho da Senha:</p>
             <span class="size__password--description--value">10</span>
@@ -40,47 +40,46 @@
 
         <div class="size__password--slider">
             <div class="size__password--slider--field">
-                <i class="material-symbols-outlined">do_not_disturb_on</i>  <!-- minus symble  -->
+                <i id="minus__button" class="material-symbols-outlined minus">do_not_disturb_on</i> <!-- minus symble  -->
                 <input type="range" min="0" max="50" value="10" steps="1">            
-                <i class="material-symbols-outlined">add_circle</i> <!-- plus symble -->
+                <i id="plus__button" class="material-symbols-outlined plus">add_circle</i> <!-- plus symble -->
             </div>
         </div>
 
-   
-    <div class="caracters__selection">
-        <div class="caracters__selection--description">
-            <p>Escolha as opções de caracteres</p>
+         <div class="caracters__selection">
+            <div class="caracters__selection--description">
+                <p>Escolha as opções de caracteres</p>
+            </div>
+            <div class="caracters__selection--options">
+                <label class="caracters__selection--options--uppercase">
+                    <input type="checkbox" class="checkbox">
+                    <span class="material-symbols-outlined checkmark">check</span>
+                </label>    
+                <p>ABC</p>
+                <label class="caracters__selection--options--lowercase">
+                    <input type="checkbox" class="checkbox">
+                    <span class="material-symbols-outlined checkmark">check</span>
+                </label>    
+                <p>abc</p>
+                <label class="caracters__selection--options--numbers">
+                    <input type="checkbox" class="checkbox">
+                    <span class="material-symbols-outlined checkmark">check</span>
+                </label>   
+                <p>123</p>
+                <label class="caracters__selection--options--special">
+                    <input type="checkbox" class="checkbox">
+                    <span class="material-symbols-outlined checkmark">check</span>
+                </label> 
+                <p>%#$</p>
+            </div>
         </div>
-        <div class="caracters__selection--options">
-            <label class="caracters__selection--options--uppercase">
-                <input type="checkbox" class="checkbox">
-                <span class="checkmark"></span>
-            </label>    
-            <p>ABC</p>
-            <label class="caracters__selection--options--lowercase">
-                <input type="checkbox" class="checkbox">
-                <span class="checkmark"></span>
-            </label>    
-            <p>abc</p>
-            <label class="caracters__selection--options--numbers">
-                <input type="checkbox" class="checkbox">
-                <span class="checkmark"></span>
-            </label>   
-            <p>123</p>
-            <label class="caracters__selection--options--special">
-                <input type="checkbox" class="checkbox">
-                <span class="checkmark"></span>
-            </label> 
-            <p>%#$</p>
-        </div>
-    </div>
-    <footer>
-        <div class="footer">
-		    <p class="footer__copyright">&#169; Copyright - Júlia Vieira - 2025</p>
-        </div>
-	</footer>
-    
-    <script src="./js/script.js"></script>
+        <footer>
+            <div class="footer">
+                <p class="footer__copyright">&#169; Copyright - Júlia Vieira - 2025</p>
+            </div>
+        </footer>
+        
+        <script src="./js/script.js"></script>
 
-</body>
+    </body>
 </html>

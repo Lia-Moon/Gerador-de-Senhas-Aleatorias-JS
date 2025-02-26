@@ -173,7 +173,7 @@ body {
     height: 10px;
     border: none;
     border-radius: 90px;
-    background: #B17DFF;
+    background: #D9D9D9;
     outline: none;
     border: none;
     z-index: 2222;
@@ -203,8 +203,6 @@ body {
     background: #B17DFF;
 }
 
-
-
 /* --------------------------------------- .caracters__selection --------------------------------------- */
 
 .caracters__selection {
@@ -223,7 +221,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Hide the browser's default checkbox */
@@ -231,7 +230,7 @@ body {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-  }
+}
 
 .caracters__selection--options label {
     border: none;
@@ -242,27 +241,40 @@ body {
     height: 32px;
     cursor: pointer;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Estiliza o checkmark customizado */
 .caracters__selection--options .checkmark {
-    width: 22px;
-    height: 22px;
+    width: 33px;
+    height: 32px;
     border-radius: 6px;
-    background: white;
-    transition: background 0.3s ease-in-out;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark {
+    color: #D9D9D9;
 }
 
 /* Estiliza quando o checkbox está marcado */
 .checkbox:checked + .checkmark {
-    background: #4CAF50; /* Cor do check marcado */
+    color: #000; /* Cor do check marcado */
+    transition: 0.3s ease-in-out;
 }
 
 .caracters__selection--options p {
     color: #D9D9D9;
     font-family: var(--font-secundaria);
     font-size: 20px;
-    margin-right: 30px;
+    margin: 0;
+    text-align: center;
 }
 
 /* --------------------------------------- .footer-copyright --------------------------------------- */
