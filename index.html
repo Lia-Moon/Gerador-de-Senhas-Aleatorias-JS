@@ -15,12 +15,13 @@
 </head>
     <body>
         <div class="page__header">       
-            <h1 class="page__header--title--solid">Gerador de Senhas</h1>
-            <h2 class="page__header--title--colourful">Aleatórias</h2>
+            <h1 class="page__header--title--solid">Password</h1>
+            <h2 class="page__header--title--colourful">Generator</h2>
         </div>
 
         <div class="page__subtitle">
-            <p>Sua senha forte em um clique! Gerador rápido, seguro e fácil.</p>
+            <p>Get your strong password in a single click!</p>
+            <p>Quick, safe, and simple generator.</p>
         </div>
 
         <div class="page__output">
@@ -29,45 +30,50 @@
                 <i class="material-symbols-outlined">cached</i> <!-- reload -->
             </div> 
         </div>
-        <div class="copy__button">
-            <button>Copiar</button>
-        </div>
+        <div class="buttons">
+            <div class="generate__button" id="generate__button">
+                <button>Generate</button>
+            </div>
+            <div class="copy__button">
+                <button>Copy</button>
+            </div>
+        </div>        
     
         <div class="size__password--description">
-            <p>Tamanho da Senha:</p>
+            <p>Password Length:</p>
             <span class="size__password--description--value">10</span>
         </div>
 
         <div class="size__password--slider">
             <div class="size__password--slider--field">
                 <i id="minus__button" class="material-symbols-outlined minus">do_not_disturb_on</i> <!-- minus symble  -->
-                <input type="range" min="0" max="50" value="10" steps="1">            
+                <input type="range" min="0" max="35" value="10" steps="1">            
                 <i id="plus__button" class="material-symbols-outlined plus">add_circle</i> <!-- plus symble -->
             </div>
         </div>
 
          <div class="caracters__selection">
             <div class="caracters__selection--description">
-                <p>Escolha as opções de caracteres</p>
+                <p>Select character options</p>
             </div>
             <div class="caracters__selection--options">
                 <label class="caracters__selection--options--uppercase">
-                    <input type="checkbox" class="checkbox">
+                    <input type="checkbox" class="checkbox" id="checkbox__uppercase">
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label>    
                 <p>ABC</p>
                 <label class="caracters__selection--options--lowercase">
-                    <input type="checkbox" class="checkbox">
+                    <input type="checkbox" class="checkbox" id="checkbox__lowercase">
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label>    
                 <p>abc</p>
                 <label class="caracters__selection--options--numbers">
-                    <input type="checkbox" class="checkbox">
+                    <input type="checkbox" class="checkbox" id="checkbox__numbers">
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label>   
                 <p>123</p>
                 <label class="caracters__selection--options--special">
-                    <input type="checkbox" class="checkbox">
+                    <input type="checkbox" class="checkbox" id="checkbox__special">
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label> 
                 <p>%#$</p>
