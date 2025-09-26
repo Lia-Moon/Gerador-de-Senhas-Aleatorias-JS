@@ -9,6 +9,7 @@ window.onload = function() {
     const minusButton = document.querySelector("#minus__button");
     const plusButton = document.querySelector("#plus__button");
 
+    const minValuePassword = 6;    
     const maxValuePassword = 35;     
 
     // Options -------------------------------------------------------------
@@ -25,7 +26,7 @@ window.onload = function() {
   
     // When clicking the minus button, the value and the slider change
     minusButton.onclick = () => {
-        if (valueInputSlider > 0 && valueInputSlider <= maxValuePassword) {
+        if (valueInputSlider > minValuePassword && valueInputSlider <= maxValuePassword) {
             let valueInputSliderNumber = Number(valueInputSlider);
 
             valueInputSliderNumber -= 1;
@@ -42,7 +43,7 @@ window.onload = function() {
 
     // When clicking the plus button, the value and the slider change
     plusButton.onclick = () => {
-        if (valueInputSlider >= 0 && valueInputSlider < maxValuePassword) {           
+        if (valueInputSlider >= minValuePassword && valueInputSlider < maxValuePassword) {           
             let valueInputSliderNumber = Number(valueInputSlider);
 
             valueInputSliderNumber += 1;
