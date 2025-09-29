@@ -61,20 +61,10 @@ window.onload = function() {
         let characters = '';
         const passwordLength = length;
 
-        if(uppercase === true) {
-            characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        }
-
-        if(lowercase === true) {
-            characters += 'abcdefghijklmnopqrstuvwxyz';
-        }
-
-        if(numbers === true) {
-            characters += '0123456789';
-        }
-        if(special === true) {
-            characters += '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
-        }
+        if(uppercase === true) characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        if(lowercase === true) characters += 'abcdefghijklmnopqrstuvwxyz';
+        if(numbers === true) characters += '0123456789';
+        if(special === true) characters += '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
         for(let i = 0; i < passwordLength; i++) {
             valuePasswordOutput += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -99,24 +89,28 @@ window.onload = function() {
         let numbersOptionCheckbox = false;
         let specialOptionCheckbox = false;
 
-        if(uppercaseOption.checked) {
-            uppercaseOptionCheckbox = true;
-        }
+        if(uppercaseOption.checked) uppercaseOptionCheckbox = true;
+        if(lowercaseOption.checked) lowercaseOptionCheckbox = true;
+        if(numbersOption.checked) numbersOptionCheckbox = true;
+        if(specialOption.checked) specialOptionCheckbox = true;
 
-        if(lowercaseOption.checked) {
-            lowercaseOptionCheckbox = true;
-        }
-
-        if(numbersOption.checked) {
-            numbersOptionCheckbox = true;
-        }
-
-        if(specialOption.checked) {
-            specialOptionCheckbox = true;
-        }
-
-        const newPassword = generatePassword(valueInputSlider, uppercaseOptionCheckbox, lowercaseOptionCheckbox, numbersOptionCheckbox, specialOptionCheckbox);
-        passwordOutput.value = newPassword; 
+        if(!(uppercaseOptionCheckbox) && !(lowercaseOptionCheckbox) && !(numbersOptionCheckbox) && !(specialOptionCheckbox)) {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                text: "Please select at least one option.",
+                showConfirmButton: false,
+                timer: 1500,
+                width: 250,
+                customClass: {
+                    htmlContainer: 'popup_message-text'                
+                }
+            });
+            passwordOutput.value = '';
+        } else {
+            const newPassword = generatePassword(valueInputSlider, uppercaseOptionCheckbox, lowercaseOptionCheckbox, numbersOptionCheckbox, specialOptionCheckbox);
+            passwordOutput.value = newPassword; 
+        }        
     };   
 
     generateButton.onclick = clickGeneratePassword;
@@ -130,29 +124,29 @@ window.onload = function() {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "Copiado com sucesso!",
+                text: "Copied!",
                 showConfirmButton: false,
                 timer: 1500,
-                width: 300,
+                width: 200,
                 customClass: {
-                    title: 'popup_message-title'                
+                    htmlContainer: 'popup_message-title'                
                 }
             });
-            // console.log('Texto copiado com sucesso:', passwordToCopy);
+            // console.log('Text copied:', passwordToCopy);
         })
         .catch(err => {
             // Error message
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Erro ao copiar. O seu navegador pode não suportar a cópia automática.",
+                text: "Failed to copy. Your browser may not support automatic copying.",
                 // footer: '<a href="#">Why do I have this issue?</a>'
                 customClass: {
                     title: 'popup_message-title',
                     htmlContainer: 'popup_message-text'                    
                 }
             });
-            // console.error('Erro ao copiar o texto:', err);
+            // console.error('Error:', err);
         });
     }
 
