@@ -290,6 +290,14 @@ body {
     text-align: center;
 }
 
+.popup_message-title {
+    font-family: var(--font-primaria);
+}
+
+.popup_message-text {
+    font-family: var(--font-secundaria);
+}
+
 /* --------------------------------------- .footer-copyright --------------------------------------- */
 
 .footer__copyright {

@@ -124,15 +124,35 @@ window.onload = function() {
 
     function copyToClipboard(passwordToCopy) {
         navigator.clipboard.writeText(passwordToCopy)
+
         .then(() => {
-            // Mensagem de sucesso (opcional)
-            console.log('Texto copiado com sucesso:', passwordToCopy);
-            alert('A senha foi copiada para a área de transferência!');
+            // Success message
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Copiado com sucesso!",
+                showConfirmButton: false,
+                timer: 1500,
+                width: 300,
+                customClass: {
+                    title: 'popup_message-title'                
+                }
+            });
+            // console.log('Texto copiado com sucesso:', passwordToCopy);
         })
         .catch(err => {
-            // Mensagem de erro (opcional)
-            console.error('Erro ao copiar o texto:', err);
-            alert('Erro ao copiar. O seu navegador pode não suportar a cópia automática.');
+            // Error message
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Erro ao copiar. O seu navegador pode não suportar a cópia automática.",
+                // footer: '<a href="#">Why do I have this issue?</a>'
+                customClass: {
+                    title: 'popup_message-title',
+                    htmlContainer: 'popup_message-text'                    
+                }
+            });
+            // console.error('Erro ao copiar o texto:', err);
         });
     }
 
