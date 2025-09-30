@@ -116,38 +116,56 @@ window.onload = function() {
     generateButton.onclick = clickGeneratePassword;
     generateButtonSymbol.onclick = clickGeneratePassword;
 
+    
     function copyToClipboard(passwordToCopy) {
-        navigator.clipboard.writeText(passwordToCopy)
-
-        .then(() => {
-            // Success message
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                text: "Copied!",
-                showConfirmButton: false,
-                timer: 1500,
-                width: 200,
-                customClass: {
-                    htmlContainer: 'popup_message-title'                
-                }
-            });
-            // console.log('Text copied:', passwordToCopy);
-        })
-        .catch(err => {
+        if (passwordToCopy == '') {
             // Error message
             Swal.fire({
+                position: "top-end",
                 icon: "error",
                 title: "Oops...",
-                text: "Failed to copy. Your browser may not support automatic copying.",
-                // footer: '<a href="#">Why do I have this issue?</a>'
+                text: "Nothing to copy.",
+                showConfirmButton: false,
+                timer: 1500,
+                width: 250,
                 customClass: {
                     title: 'popup_message-title',
-                    htmlContainer: 'popup_message-text'                    
+                    htmlContainer: 'popup_message-text'                
                 }
             });
-            // console.error('Error:', err);
-        });
+        } else {      
+
+            navigator.clipboard.writeText(passwordToCopy)
+            .then(() => {
+                // Success message
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    text: "Copied!",
+                    showConfirmButton: false,
+                    timer: 1500,
+                    width: 200,
+                    customClass: {
+                        htmlContainer: 'popup_message-title'                
+                    }
+                });
+                // console.log('Text copied:', passwordToCopy);
+            })
+            .catch(err => {
+                // Error message
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Failed to copy. Your browser may not support automatic copying.",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                    customClass: {
+                        title: 'popup_message-title',
+                        htmlContainer: 'popup_message-text'                    
+                    }
+                });
+                // console.error('Error:', err);
+            });
+        }
     }
 
     copyButton.onclick = () => {
