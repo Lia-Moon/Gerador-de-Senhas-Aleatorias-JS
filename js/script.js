@@ -1,23 +1,23 @@
 window.onload = function() {
     
-    const passwordOutput = document.querySelector(".page__output--container--password");           
+    const passwordOutput = document.querySelector(".page-output-container-password");           
 
     // Buttons -------------------------------------------------------------
-    const generateButton = document.querySelector("#generate__button");
+    const generateButton = document.querySelector("#generate-button");
     const generateButtonSymbol = document.querySelector(".material-symbols-outlined");
-    const copyButton = document.querySelector(".copy__button");
-    const minusButton = document.querySelector("#minus__button");
-    const plusButton = document.querySelector("#plus__button");
+    const copyButton = document.querySelector("#copy-button");
+    const minusButton = document.querySelector("#minus-button");
+    const plusButton = document.querySelector("#plus-button");
 
     const minValuePassword = 6;    
     const maxValuePassword = 35;     
 
     // Options -------------------------------------------------------------
     // slider
-    const inputSlider = document.querySelector(".size__password--slider--field input");
+    const inputSlider = document.querySelector(".size-password-slider-field input");
     let valueInputSlider = inputSlider.value;
     // value showed for the size
-    const numberShowed = document.querySelector(".size__password--description--value");
+    const numberShowed = document.querySelector(".size-password-description-value");
 
     inputSlider.oninput = (()=>{
         valueInputSlider = inputSlider.value;
@@ -80,10 +80,10 @@ window.onload = function() {
 
     // Click to generate the random
     const clickGeneratePassword = () => {        
-        const uppercaseOption = document.querySelector("#checkbox__uppercase"); 
-        const lowercaseOption = document.querySelector("#checkbox__lowercase"); 
-        const numbersOption = document.querySelector("#checkbox__numbers"); 
-        const specialOption = document.querySelector("#checkbox__special"); 
+        const uppercaseOption = document.querySelector("#checkbox-uppercase"); 
+        const lowercaseOption = document.querySelector("#checkbox-lowercase"); 
+        const numbersOption = document.querySelector("#checkbox-numbers"); 
+        const specialOption = document.querySelector("#checkbox-special"); 
         let uppercaseOptionCheckbox = false;
         let lowercaseOptionCheckbox = false;
         let numbersOptionCheckbox = false;
