@@ -21,8 +21,8 @@ main {
     flex: 1;
 }
 
-/* --------------------------------------- .page__header --------------------------------------- */
-.page__header {
+/* --------------------------------------- .page-header --------------------------------------- */
+.page-header {
     font-family: var(--font-primaria);
     font-size: 65px;
     text-align: center;
@@ -32,19 +32,19 @@ main {
     padding: 1.8rem 5rem;
 }
 
-.page__header--title--solid {
+.page-header-title-solid {
     color: #D9D9D9;
 }
 
-.page__header--title--colourful {
+.page-header-title-colourful {
     background: linear-gradient(90deg, #A76CFF 0%, #FFF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
 }
 
-/* --------------------------------------- .page__subtitle --------------------------------------- */
-.page__subtitle {
+/* --------------------------------------- .page-subtitle --------------------------------------- */
+.page-subtitle {
     font-family: var(--font-secundaria);
     font-size: 22px;
     color: #D9D9D9;
@@ -55,13 +55,13 @@ main {
 
 /* --------------------------------------- .page__output --------------------------------------- */
 
-.page__output {
+.page-output {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.page__output--container {
+.page-output-container {
     width: 584px;
     height: 58px;
     border-radius: 10px;
@@ -73,7 +73,7 @@ main {
     align-items: center;
 }
 
-.page__output--container--password { /* Campo de senha gerada */
+.page-output-container-password { /* Campo de senha gerada */
     align-self: center;
     pointer-events: none;
     border: none;
@@ -84,7 +84,7 @@ main {
     padding: 0 10px;
 }
 
-.page__output .material-symbols-outlined { /* Ícone reload */
+.page-output .material-symbols-outlined { /* Ícone reload */
     color: #D9D9D9;
     font-size: 39px;
     cursor: pointer;
@@ -92,20 +92,20 @@ main {
 }
 
 
-#reload_button {
+#reload-button {
     transition: all 0.15s ease-out;
     user-select: none;
 }
 
-#reload_button:hover {
+#reload-button:hover {
     color: #D9D9D9;
 }
 
-#reload_button:active {
+#reload-button:active {
     transform: translateY(1px); 
 }
 
-/* --------------------------------------- .copy__button e .generate__button --------------------------------------- */
+/* --------------------------------------- .copy-button e .generate-button --------------------------------------- */
 .buttons {
     display: flex;
     justify-content: center;
@@ -115,7 +115,7 @@ main {
     user-select: none;
 }
 
-.copy__button, .generate__button {
+.copy-button, .generate-button {
     text-align: center;
     margin-left: 0.1%;
     width: 91px;
@@ -123,7 +123,7 @@ main {
     padding: 1rem 1.5rem;
 }
 
-.copy__button button, .generate__button button {
+.copy-button button, .generate-button button {
     border-radius: 10px;
     border-color: #D9D9D9;
     background-color: rgba(0, 0, 0, 0);
@@ -136,23 +136,23 @@ main {
     width: 120px;
 }
 
-.copy__button button:hover, .generate__button button:hover {
+.copy-button button:hover, .generate-button button:hover {
     background: #D9D9D9;
     color: #000;
 }
 
-/* --------------------------------------- .minus__button e .plus__button --------------------------------------- */
+/* --------------------------------------- .minus-button e .plus-button --------------------------------------- */
 
-#minus__button, #plus__button {
+#minus-button, #plus-button {
     transition: all 0.15s ease-out;
     user-select: none;
 }
 
-#minus__button:hover, #plus__button:hover {
+#minus-button:hover, #plus-button:hover {
     color: #D9D9D9;
 }
 
-#minus__button:active, #plus__button:active {
+#minus-button:active, #plus-button:active {
     transform: translateY(1px); 
 }
 
@@ -166,7 +166,7 @@ main {
     justify-content: center;
 }
 
-.size__password--description { /* Texto Tamanho senha */
+.size-password-description { /* Texto Tamanho senha */
     font-family: var(--font-secundaria);
     font-size: 20px;
     color: #D9D9D9;
@@ -179,7 +179,7 @@ main {
     gap: 20px;
 }
 
-.size__password--description--value {
+.size-password-description-value {
     position: relative;
     display: flex;
     justify-content: center;
@@ -190,7 +190,7 @@ main {
     width: 20px;
 }
 
-.size__password--slider {
+.size-password-slider {
     position: relative;
     display: flex;
 
@@ -207,7 +207,7 @@ main {
     color: #D9D9D9;
 }
 
-.size__password--slider--field {
+.size-password-slider-field {
     position: relative;
     display: flex;
     align-items: center;
@@ -218,14 +218,14 @@ main {
     text-align: center;
 }
 
-.size__password--slider i {
+.size-password-slider i {
     color: #D9D9D9;
     font-size: 29px;
     cursor: pointer;
     margin: 10px;
 }
 
-.size__password--slider--field input {
+.size-password-slider-field input {
     -webkit-appearance: none;
     width: 200px;
     height: 10px;
@@ -237,7 +237,7 @@ main {
     z-index: 3;
 }
 
-.size__password--slider--field input::-webkit-slider-thumb {
+.size-password-slider-field input::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
@@ -247,7 +247,7 @@ main {
     border: 1px solid #D9D9D9;
 }
 
-.size__password--slider--field input::-moz-range-thumb {
+.size-password-slider-field input::-moz-range-thumb {
     /* -webkit-appearance: none; */
     width: 20px;
     height: 20px;
@@ -257,17 +257,17 @@ main {
     border: 1px solid #D9D9D9;
 }
 
-.size__password--slider--field input::-moz-range-progress {
+.size-password-slider-field input::-moz-range-progress {
     background: #B17DFF;
 }
 
-/* --------------------------------------- .caracters__selection --------------------------------------- */
+/* --------------------------------------- .caracters-selection --------------------------------------- */
 
-.caracters__selection {
+.caracters-selection {
     padding: 1rem 4rem 2rem 2rem;
 }
 
-.caracters__selection--description { /* Select character options */
+.caracters-selection--description { /* Select character options */
     font-family: var(--font-secundaria);
     font-size: 20px;
     color: #D9D9D9;
@@ -275,7 +275,7 @@ main {
     padding: 0rem 5rem 2rem 5rem;
 }
 
-.caracters__selection--options {
+.caracters-selection-options {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,13 +284,13 @@ main {
 }
 
 /* Hide the browser's default checkbox */
-.caracters__selection--options input {
+.caracters-selection-options input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-.caracters__selection--options label {
+.caracters-selection-options label {
     border: none;
     border-radius: 10px;
     background: #D9D9D9;
@@ -306,7 +306,7 @@ main {
 }
 
 /* Estiliza o checkmark customizado */
-.caracters__selection--options .checkmark {
+.caracters-selection-options .checkmark {
     width: 33px;
     height: 32px;
     border-radius: 6px;
@@ -328,7 +328,7 @@ main {
     transition: 0.3s ease-in-out;
 }
 
-.caracters__selection--options p {
+.caracters-selection-options p {
     color: #D9D9D9;
     font-family: var(--font-secundaria);
     font-size: 20px;
@@ -346,7 +346,7 @@ main {
 
 /* --------------------------------------- .footer-copyright --------------------------------------- */
 
-.footer__copyright {
+.footer-copyright {
     margin-top: auto;
     position: relative;
     bottom: 0;
@@ -360,7 +360,7 @@ main {
     padding: 10px;
 }
 
-.footer__copyright p {
+.footer-copyright p {
     font-size: 13px;
     margin: 0; 
     line-height: 20px;

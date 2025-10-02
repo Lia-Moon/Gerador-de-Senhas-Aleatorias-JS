@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Senhas Aleatórias</title>
+    <title>Random Password Generator</title>
 
     <link rel="stylesheet" href="./styles/reset.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -16,72 +16,72 @@
 
 </head>
     <body>
-        <div class="page__header">       
-            <h1 class="page__header--title--solid">Password</h1>
-            <h2 class="page__header--title--colourful">Generator</h2>
+        <div class="page-header">       
+            <h1 class="page-header-title-solid">Password</h1>
+            <h2 class="page-header-title-colourful">Generator</h2>
         </div>
 
-        <div class="page__subtitle">
+        <div class="page-subtitle">
             <p>Get your strong password in a single click!</p>
             <p>Quick, safe, and simple generator.</p>
         </div>
 
-        <div class="page__output">
-            <div class="page__output--container">
-                <input type="text" id="senha--container" class="page__output--container--password">
-                <i id="reload_button" class="material-symbols-outlined">cached</i> <!-- reload -->
+        <div class="page-output">
+            <div class="page-output-container">
+                <input type="text" class="page-output-container-password">
+                <i id="reload-button" class="material-symbols-outlined">cached</i> <!-- reload -->
             </div> 
         </div>
         <div class="buttons">
-            <div class="generate__button" id="generate__button">
+            <div class="generate-button" id="generate-button">
                 <button>Generate</button>
             </div>
-            <div class="copy__button">
+            <div id="copy-button" class="copy-button">
                 <button>Copy</button>
             </div>
         </div>        
     
-        <div class="size__password--description">
+        <div class="size-password-description">
             <p>Password Length:</p>
-            <span class="size__password--description--value">10</span>
+            <span class="size-password-description-value">10</span>
         </div>
 
-        <div class="size__password--slider">
-            <div class="size__password--slider--field">
-                <i id="minus__button" class="material-symbols-outlined minus">do_not_disturb_on</i> <!-- minus symble  -->
+        <div class="size-password-slider">
+            <div class="size-password-slider-field">
+                <i id="minus-button" class="material-symbols-outlined minus">do_not_disturb_on</i> <!-- minus symble  -->
                 <input type="range" min="6" max="35" value="10" steps="1">            
-                <i id="plus__button" class="material-symbols-outlined plus">add_circle</i> <!-- plus symble -->
+                <i id="plus-button" class="material-symbols-outlined plus">add_circle</i> <!-- plus symble -->
             </div>
         </div>
 
-         <div class="caracters__selection">
-            <div class="caracters__selection--description">
+         <div class="caracters-selection">
+            <div class="caracters-selection--description">
                 <p>Select character options</p>
             </div>
-            <div class="caracters__selection--options">
-                <label class="caracters__selection--options--uppercase">
-                    <input type="checkbox" class="checkbox" id="checkbox__uppercase" checked>
+            <div class="caracters-selection-options">
+                <label>
+                    <input type="checkbox" class="checkbox" id="checkbox-uppercase" checked>
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label>    
                 <p>ABC</p>
-                <label class="caracters__selection--options--lowercase">
-                    <input type="checkbox" class="checkbox" id="checkbox__lowercase" checked>
+                <label>
+                    <input type="checkbox" class="checkbox" id="checkbox-lowercase" checked>
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label>    
                 <p>abc</p>
-                <label class="caracters__selection--options--numbers">
-                    <input type="checkbox" class="checkbox" id="checkbox__numbers">
+                <label>
+                    <input type="checkbox" class="checkbox" id="checkbox-numbers">
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label>   
                 <p>123</p>
-                <label class="caracters__selection--options--special">
-                    <input type="checkbox" class="checkbox" id="checkbox__special">
+                <label>
+                    <input type="checkbox" class="checkbox" id="checkbox-special">
                     <span class="material-symbols-outlined checkmark">check</span>
                 </label> 
                 <p>%#$</p>
             </div>
         </div>
-        <footer class="footer__copyright">
+        <footer class="footer-copyright">
             <p>&#169; Copyright - Júlia Vieira - 2025</p>
         </footer>
         
